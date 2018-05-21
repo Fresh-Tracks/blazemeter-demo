@@ -1,0 +1,20 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: blazemeter-demo
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: blazemeter-demo
+      annotations:
+        prometheus.io.scrape: "false"
+    spec:
+      containers:
+      - name: blazemeter-demo
+        image: blazemeter-demo:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
