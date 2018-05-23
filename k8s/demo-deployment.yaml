@@ -14,7 +14,12 @@ spec:
     spec:
       containers:
       - name: blazemeter-demo
-        image: blazemeter-demo:latest
+        image: gcr.io/freshtracks-io/blazemeter-demo:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
+        resources:
+          requests:
+            cpu: "50m"
+          limits:
+            cpu: "50m"
