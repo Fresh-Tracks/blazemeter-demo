@@ -17,8 +17,8 @@ To build and push to GCR/Bowl
 4. kubectl apply -f k8s
 
 To run the simple jmeter script:
-
 1. brew install jmeter
 2. jmeter -t blazemeter-demo.jmx
+3. Click 'Run'
 
 
